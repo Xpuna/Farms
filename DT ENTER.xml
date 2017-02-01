@@ -1,0 +1,8 @@
+<If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
+	<If Condition="Me.Location.Distance(new WoWPoint(3807.423, 6343.349, 185.4199)) &gt;= 30" >
+		<CustomBehavior File="FlyTo" X="9160.772" Y="-1364.403" Z="1115.498" />
+	</If>
+	<RunTo X="3822.235" Y="6355.099" Z="185.5384" />
+	<CustomBehavior File="MyCTM" X="9190.415" Y="-1395.566" Z="1110.215" TerminateWhen="Me.MapId == 602" />
+	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
+</If>
